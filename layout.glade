@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkListStore" id="houses">
+    <columns>
+      <!-- column-name StwMNr -->
+      <column type="gchararray"/>
+      <!-- column-name Name -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">740-01</col>
+        <col id="1" translatable="yes">Haus 1 (MKH)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-02</col>
+        <col id="1" translatable="yes">Haus 2</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-03</col>
+        <col id="1" translatable="yes">Haus 3</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-04</col>
+        <col id="1" translatable="yes">Haus 4 (EWH)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-05</col>
+        <col id="1" translatable="yes">Haus 5</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-06</col>
+        <col id="1" translatable="yes">Haus 6</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-07</col>
+        <col id="1" translatable="yes">Haus 7</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-08</col>
+        <col id="1" translatable="yes">Haus 8</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">741-09</col>
+        <col id="1" translatable="yes">Haus 9 (HSH, grünes Haus)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">741-10</col>
+        <col id="1" translatable="yes">Haus 10 (Kaindl Haus)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">741-11</col>
+        <col id="1" translatable="yes">Haus 11 (blaues Haus)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">741-12</col>
+        <col id="1" translatable="yes">Haus 12 (O-Haus)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">741-13</col>
+        <col id="1" translatable="yes">Haus 13 (rotes Haus)</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">740-14</col>
+        <col id="1" translatable="yes">Haus 14</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">741-16</col>
+        <col id="1" translatable="yes">Haus 16 (O₂-Würfel)</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkTextBuffer" id="output_data"/>
+  <object class="GtkWindow" id="window0">
+    <property name="can_focus">False</property>
+    <signal name="delete-event" handler="delete_window" swapped="no"/>
+    <signal name="destroy-event" handler="delete_window" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="box1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="margin_left">10</property>
+        <property name="margin_right">10</property>
+        <property name="margin_top">10</property>
+        <property name="margin_bottom">10</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkImage" id="ssn-logo">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+	    <property name="pixbuf">/usr/share/zim2ip/StuStaNet_Logo.svg</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Haus: </property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBox" id="house">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="resize_mode">immediate</property>
+                <property name="model">houses</property>
+                <property name="active">1</property>
+                <property name="has_frame">False</property>
+                <property name="has_entry">True</property>
+                <property name="entry_text_column">1</property>
+                <property name="id_column">0</property>
+                <child internal-child="entry">
+                  <object class="GtkEntry" id="combobox-entry">
+                    <property name="can_focus">False</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Zimmer</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="room">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="max_length">4</property>
+                <property name="width_chars">5</property>
+                <signal name="activate" handler="start_search" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToolbar" id="toolbar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">end</property>
+            <property name="margin_top">5</property>
+            <property name="margin_bottom">5</property>
+            <property name="toolbar_style">both-horiz</property>
+            <child>
+              <object class="GtkToolButton" id="go">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="is_important">True</property>
+                <property name="label" translatable="yes">Abfrage starten</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-find</property>
+                <signal name="clicked" handler="start_search" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="separator0">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="exit">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="is_important">True</property>
+                <property name="label" translatable="yes">Werkzeug beenden</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-quit</property>
+                <signal name="clicked" handler="delete_window" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTextView" id="output">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">output_data</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

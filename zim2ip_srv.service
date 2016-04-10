@@ -1,0 +1,9 @@
+[Unit] 
+Description=Server providing room information for zim2ip_cli and zim2ip_gui
+
+[Service] 
+ExecStart=/usr/bin/zim2ip_srv
+Resart=on-failure
+
+[Install] 
+WantedBy=multi-user.target 

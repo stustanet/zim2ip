@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Zim2IP
+GenericName=Lookup StuStaNet IPs by Room
+GenericName[de]=StuStaNet IPs anhand des Raums abfragen
+Comment=Lookup StuStaNet IPs by Room
+Comment[de]=StuStaNet IPs anhand des Raums abfragen
+Keywords=stustanet;zim2ip
+Type=Application
+Icon=easytag
+Categories=GTK;Utility;
+Exec=zim2ip_gui
+Terminal=false
+StartupNotify=true
+Path=/usr/local/stustanet/zim2ip/bin

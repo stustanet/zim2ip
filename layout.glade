@@ -73,6 +73,7 @@
       <row>
 	<col id="0" translatable="yes">787-67</col>
 	<col id="1" translatable="yes">Max-Bill Wohnheim</col>
+      </row>
     </data>
   </object>
   <object class="GtkTextBuffer" id="output_data"/>

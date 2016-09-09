@@ -70,6 +70,9 @@
         <col id="0" translatable="yes">741-16</col>
         <col id="1" translatable="yes">Haus 16 (O₂-Würfel)</col>
       </row>
+      <row>
+	<col id="0" translatable="yes">787-67</col>
+	<col id="1" translatable="yes">Max-Bill Wohnheim</col>
     </data>
   </object>
   <object class="GtkTextBuffer" id="output_data"/>

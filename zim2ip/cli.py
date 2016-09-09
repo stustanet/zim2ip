@@ -8,8 +8,7 @@ import socket
 import sys
 
 
-VALIDROOMS = re.compile("[0-9]{3}-[0-9]{2} (([0-9]{2}-[0-9]{2}-[0-9]|"
-                            "(l|r)ge)-z|(schulung|teestube)-g)-[0-9sw]$")
+VALIDROOMS = re.compile("[0-9]{3}-[0-9]{2} [0-9]{2}-[0-9]{2}-[0-9]")
 
 def zim2ip_lookup(roomnr, location):
     if VALIDROOMS.match(roomnr):
@@ -54,7 +53,7 @@ def main():
 
 
     roomnr = input('Bitte die "Wohnungsnummer", wie auf dem Mietvertrag '
-                   'angegeben, eingeben (sowas wie 741-12 00-28-0-z-1): ')
+                   'angegeben, eingeben (sowas wie "741-12 00-28-0"): ')
     print('')
     result = zim2ip_lookup(roomnr, args.socket)
     if result:

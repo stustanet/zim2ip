@@ -11,9 +11,8 @@ import re
 import signal
 
 
-VALIDROOMS = re.compile("[0-9]{3}-[0-9]{2} (([0-9]{2}-[0-9]{2}-[0-9]|"
-                        "(l|r)ge)-z|(schulung|teestube)-g)-[0-9sw]$")
-
+#example valid room: "741-09 13-18" oder "787-67 03-15-0"
+VALIDROOMS = re.compile("[0-9]{3}-[0-9]{2} [0-9]{2}-[0-9]{2}-[0-9]")
 
 class Zim2IPProto(asyncio.Protocol):
     """
@@ -64,7 +63,7 @@ def main():
     with open(args.list_file) as zim2ip:
         for line in zim2ip:
             spline = line.split(':')
-            zim_dict[spline[0]] = spline[1]
+            zim_dict[spline[0]] = spline[2]
 
     try:
         os.unlink(args.socket)

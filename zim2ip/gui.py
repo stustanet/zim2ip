@@ -55,7 +55,7 @@ class Zim2IPGui:
         house = self.builder.get_object('house').get_active_iter()
         housestwm = self.builder.get_object('houses').get_value(house, 0)
         room = self.builder.get_object('room').get_text().rjust(4, '0')
-        roomstwm = "-".join((room[0:2], room[2:4])) + '-0-z-1'
+        roomstwm = "-".join((room[0:2], room[2:4])) + '-0'
         result = zim2ip_lookup(housestwm + ' ' + roomstwm, self.socket)
         if result:
             self.buf.set_text("\n".join(result))
